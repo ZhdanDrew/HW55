@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Application</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+  </head>
+  <body>
+    <audio id="audio"></audio>
+
+    <header>
+      <div class="song-name-wrapper">
+        <img class="logo" />
+        <h2 id="current-song-name"></h2>
+      </div>
+      <nav>Music</nav>
+    </header>
+
+    <main>
+      <div class="search-input-wrapper">
+        <input type="text" id="search-input" />
+        <button id="search-button">Search for artist songs</button>
+      </div>
+
+      <div class="history-items-wrapper">
+        
+      </div>
+
+      <div class="music-cards-wrapper"></div>
+
+      <section class="player-controlls">
+        <!-- <i class="fas fa-stop"></i> -->
+        <div class="controlls">
+            <i class="fas fa-chevron-left" id="prev-song-button"></i>
+            <i class="fas fa-play" id="play-stop-button"></i>
+            <i class="fas fa-chevron-right" id="next-song-button"></i>
+        </div>
+
+        <input type="range" id="player-progress" min="1" step="1" max="30" value="1" />
+        <h3 id="player-progress-time">00:00</h3>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-icons@11.12.0/index.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
